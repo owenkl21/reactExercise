@@ -155,9 +155,14 @@ main h2 {
 }
 
 #examples menu button.active {
-  background-color: #7925d3;
+  background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
   color: #ebe7ef;
+  font-size: 1.5rem;
 }
+
+
+
+
 
 #tab-content {
   padding: 1rem;
@@ -172,6 +177,7 @@ main h2 {
 
 #tab-content code {
   font-size: 1rem;
+
 }
 
 #core-concepts li {
