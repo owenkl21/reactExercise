@@ -1,7 +1,6 @@
 import Header from './components/header.jsx';
 import CoreConcept from './components/core-conecpts.jsx';
-import Section from './../../../04 Essentials Deep Dive/05-multiple-jsx-slots/src/components/Section';
-
+import TabButton from './components/TabButtons.jsx';
 function App() {
   return (
     <div>
@@ -9,6 +8,12 @@ function App() {
       <main>
         <section id="core-concepts">
           <CoreConcept />
+        </section>
+        <section id="examples">
+          <h3>Examples</h3>
+          <menu>
+            <TabButton />
+          </menu>
         </section>
       </main>
     </div>
