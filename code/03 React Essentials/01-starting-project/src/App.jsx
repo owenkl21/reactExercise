@@ -25,11 +25,11 @@ function App() {
           <div id="tab-content">
             {selectedTopic ? (
               <div>
-                {' '}
                 <h3>{EXAMPLES[selectedTopic].title}</h3>
+                <hr />
                 <p>{EXAMPLES[selectedTopic].description}</p>
                 <pre>
-                  <code>{EXAMPLES[selectedTopic].code}</code>
+                  <code id="glow">{EXAMPLES[selectedTopic].code}</code>
                 </pre>
               </div>
             ) : (
