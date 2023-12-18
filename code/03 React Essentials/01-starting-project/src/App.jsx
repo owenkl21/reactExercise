@@ -6,6 +6,7 @@ import { EXAMPLES } from './data';
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
+
   function handleClick(selectedButton) {
     setSelectedTopic(selectedButton);
   }
@@ -20,7 +21,7 @@ function App() {
         <section id="examples">
           <h3> Examples </h3>
           <menu>
-            <TabButton onSelect={handleClick} />
+            <TabButton selectedTopic={selectedTopic} onSelect={handleClick} />
           </menu>
           <div id="tab-content">
             {selectedTopic ? (
