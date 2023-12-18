@@ -15,9 +15,7 @@ function App() {
     <div>
       <Header />
       <main>
-        <section id="core-concepts">
-          <CoreConcept />
-        </section>
+        <CoreConcept />
         <section id="examples">
           <h3> Examples </h3>
           <menu>
