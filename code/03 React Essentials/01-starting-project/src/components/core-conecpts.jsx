@@ -1,9 +1,10 @@
 import React from 'react';
 import { CORE_CONCEPTS } from '../data';
+import Section from './SectionComp';
 
 function CoreConcept() {
   return (
-    <section id="core-concepts">
+    <Section id="core-concepts">
       <ul>
         {Object.keys(CORE_CONCEPTS).map((key) => {
           const { title, description, image } = CORE_CONCEPTS[key];
@@ -16,7 +17,7 @@ function CoreConcept() {
           );
         })}
       </ul>
-    </section>
+    </Section>
   );
 }
 
