@@ -7,9 +7,7 @@ function App() {
       <Header />
       <main>
         <CoreConcept />
-        <section id="examples">
-          <TabContent />
-        </section>
+        <TabContent />
       </main>
     </div>
   );
