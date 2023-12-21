@@ -98,6 +98,22 @@ body {
   color: #f8ca31;
 }
 
+#yelBtn {
+  width: 3rem;
+  border: none;
+  background: none;
+  color: #c3ba78;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  text-align: center;
+}
+
+#yelBtn:hover {
+  color: #f8ca31;
+}
+
 .player {
   border: 2px solid transparent;
   padding: 0.5rem;
