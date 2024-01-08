@@ -46,16 +46,27 @@ body {
 }
 
 #game-container {
-  max-width: 45rem;
+
+  display: flex;
+  justify-content: center;
+  /* Centers children horizontally */
+  align-items: center;
+  /* Centers children vertically */
+  flex-direction: column;
+
+  max-width: 55rem;
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 6px;
   background: linear-gradient(#383624, #282617);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 #players {
+  width: 35rem;
   list-style: none;
   padding: 0;
   margin: 1rem 0;
@@ -93,6 +104,25 @@ body {
   padding: 0.5rem 0.25rem 0.25rem 0.25rem;
   text-align: center;
 }
+
+#reset {
+  display: flex;
+  height: 3rem;
+  width: 5rem;
+  background: none;
+  color: #c3ba78;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  text-align: center;
+  border-color: #f6e35a;
+  animation: pulse 2s infinite ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 #players button:hover {
   color: #f8ca31;
@@ -150,6 +180,18 @@ body {
   margin-left: 1rem;
   font-size: 1rem;
   color: #e1dec7;
+}
+
+
+
+.winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse-text-yel 10s infinite ease-in-out, pulse-text-size 1s infinite ease-in-out;
+  font-family: 'Caprasimo', cursive;
+  font-size: 2rem;
+  -webkit-animation: pulse-text-yel 10s infinite ease-in-out, pulse-text-size 1s infinite ease-in-out;
 }
 
 ol {
@@ -322,6 +364,20 @@ ol {
 
   100% {
     color: #e1dec7;
+  }
+}
+
+@keyframes pulse-text-yel {
+  0% {
+    color: #3f3b00;
+  }
+
+  50% {
+    color: #fcd256;
+  }
+
+  100% {
+    color: rgba(255, 187, 0, 0.8);
   }
 }
 
