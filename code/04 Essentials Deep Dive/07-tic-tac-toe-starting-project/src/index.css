@@ -46,14 +46,12 @@ body {
 }
 
 #game-container {
-
   display: flex;
   justify-content: center;
-  /* Centers children horizontally */
+  /*Centerschildrenhorizontally*/
   align-items: center;
-  /* Centers children vertically */
+  /*Centerschildrenvertically*/
   flex-direction: column;
-
   max-width: 55rem;
   margin: 3rem auto;
   padding: 2rem;
@@ -63,6 +61,24 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
+}
+
+#game-contain {
+  animation: pop-in 1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 55rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background: linear-gradient(#383624, #282617);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: pop-in 1s ease-in;
 }
 
 #players {
@@ -120,6 +136,12 @@ body {
   animation: pulse 2s infinite ease-in-out;
   justify-content: center;
   align-items: center;
+  margin: auto;
+}
+
+#reset:hover {
+  color: #46432f;
+  background-color: #f8c031;
 }
 
 
@@ -149,6 +171,27 @@ body {
   padding: 0.5rem;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.headers {
+  display: flex;
+  color: #f8c031;
+  font-family: 'Caprasimo',
+    cursive;
+  font-size: 3rem;
+  margin: auto;
+  justify-content: center;
+}
+
+.gameTurns {
+  text-decoration: underline;
+  display: flex;
+  color: #46432f;
+  font-family: 'Caprasimo',
+    cursive;
+  font-size: 3rem;
+  margin: auto;
+  justify-content: center;
 }
 
 .player-name {
@@ -415,6 +458,7 @@ ol {
 /* Fancy animation for showing the "Game Over" element */
 @keyframes pop-in {
   0% {
+    animation-delay: 2s;
     transform: scale(0);
     opacity: 0;
   }

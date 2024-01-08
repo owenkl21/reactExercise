@@ -1,6 +1,7 @@
 export default function Log({ turns }) {
   return (
     <>
+      <h1 className="gameTurns">Game Turns</h1>
       <ol id="log">
         {turns.map((turn) => (
           <li key={`${turn.square.row}-${turn.square.col}`}>

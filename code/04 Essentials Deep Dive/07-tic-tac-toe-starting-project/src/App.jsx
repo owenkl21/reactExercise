@@ -12,7 +12,8 @@ function App() {
   const [gameWon, setGameWon] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [winner, setWinner] = useState(null);
-
+  const [player1Name, setPlayer1Name] = useState('Player 1');
+  const [player2Name, setPlayer2Name] = useState('Player 2');
   const [gameTurns, setGameTurns] = useState([]);
   const [gameBoard, setGameBoard] = useState([
     [null, null, null],
@@ -91,33 +92,42 @@ function App() {
     setWinner(null);
     setActivePlayer('X'); // or whichever player should start the new game
   };
+
+  let winnerSymbol = 'X'; // Let's say 'X' is the winner
+  let winnerName = winnerSymbol === 'X' ? player1Name : player2Name;
   return (
     <main>
       <Header />
-      <div id="game-container">
-        <ol id="players" className="highlight-player">
-          <Player
-            initialName={'Player 1'}
-            symbol={'X'}
-            isActive={activePlayer === 'X'}
+      {gameOver ? (
+        <div id="game-contain">
+          <GameOver reset={resetGameBoard} winner={winnerName}></GameOver>
+        </div>
+      ) : (
+        <div id="game-container">
+          <ol id="players" className="highlight-player">
+            <Player
+              initialName={player1Name}
+              setPlayerName={setPlayer1Name}
+              symbol="X"
+              isActive={activePlayer === 'X'}
+            />
+            <Player
+              initialName={player2Name}
+              setPlayerName={setPlayer2Name}
+              symbol="O"
+              isActive={activePlayer === 'O'}
+            />
+          </ol>
+          <GameBoard
+            onSelectSquare={handleSelectSquare}
+            gameBoard={gameBoard}
+            turns={gameTurns}
+            gameWon={gameWon}
+            setGameBoard={setGameBoard}
           />
-          <Player
-            initialName={'Player 2'}
-            symbol={'O'}
-            isActive={activePlayer === 'O'}
-          />
-        </ol>
-        {gameWon && <p className="winner"> You won, {winner}!</p>}
-        <GameBoard
-          onSelectSquare={handleSelectSquare}
-          gameBoard={gameBoard}
-          turns={gameTurns}
-          gameWon={gameWon}
-          setGameBoard={setGameBoard}
-        />
-        {gameOver && <GameOver reset={resetGameBoard}></GameOver>}
-      </div>
-      <Log turns={gameTurns} />
+        </div>
+      )}
+      {gameTurns.length > 0 && <Log turns={gameTurns} />}
     </main>
   );
 }
