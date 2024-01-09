@@ -77,7 +77,7 @@ body {
   padding: 1rem;
   table-layout: fixed;
   border-spacing: 1rem;
-  text-align: right;
+  text-align: center;
   justify-content: center;
 
 }
@@ -87,6 +87,14 @@ body {
   border-collapse: separate;
   border-spacing: 0 1rem;
   /* Space between rows */
+}
+
+#result th,
+#result td {
+  width: 25%;
+  /* As there are four columns, each gets 25% */
+  text-align: center;
+  /* Optional: for aligning content in the center */
 }
 
 #result thead {
