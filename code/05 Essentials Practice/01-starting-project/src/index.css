@@ -40,9 +40,15 @@ body {
 }
 
 .input-group {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns */
+  grid-template-rows: auto auto;
+  /* Two rows */
   gap: 1.5rem;
+  /* Spacing between items */
+  justify-content: center;
+  align-items: center;
 }
 
 #user-input label {
@@ -65,12 +71,22 @@ body {
 }
 
 #result {
+  display: flex;
   max-width: 50rem;
   margin: 2rem auto;
   padding: 1rem;
   table-layout: fixed;
   border-spacing: 1rem;
   text-align: right;
+  justify-content: center;
+
+}
+
+#result table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  /* Space between rows */
 }
 
 #result thead {
