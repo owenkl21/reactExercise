@@ -41,67 +41,71 @@ export default function Input() {
 
   return (
     <>
-      <div id="user-input">
-        <div className="input-group">
-          <p>
-            <label>Initial Investment</label>
-            <input
-              type="number"
-              required
-              value={initialInvestment}
-              onChange={handleInitialInvestmentChange}
-            />
-          </p>
-          <p>
-            <label>Annual Investment</label>
-            <input
-              type="number"
-              required
-              value={annualInvestment}
-              onChange={handleAnnualInvestmentChange}
-            />
-          </p>
-          <p>
-            <label>Expected</label>
-            <input
-              type="number"
-              required
-              value={expectedReturn}
-              onChange={handleExpectedChange}
-            />
-          </p>
-          <p>
-            <label>Duration</label>
-            <input
-              type="number"
-              required
-              value={duration}
-              onChange={handleDurationChange}
-            />
-          </p>
+      <div className="mainContainer">
+        <div id="user-input">
+          <div className="input-group">
+            <p>
+              <label>Initial Investment</label>
+              <input
+                type="number"
+                required
+                value={initialInvestment}
+                onChange={handleInitialInvestmentChange}
+              />
+            </p>
+            <p>
+              <label>Annual Investment</label>
+              <input
+                type="number"
+                required
+                value={annualInvestment}
+                onChange={handleAnnualInvestmentChange}
+              />
+            </p>
+            <p>
+              <label>Expected</label>
+              <input
+                type="number"
+                required
+                value={expectedReturn}
+                onChange={handleExpectedChange}
+              />
+            </p>
+            <p>
+              <label>Duration</label>
+              <input
+                type="number"
+                required
+                value={duration}
+                onChange={handleDurationChange}
+              />
+            </p>
+          </div>
         </div>
-      </div>
-      <div id="result">
-        <table>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th>Interest Earned</th>
-              <th>Value at End of Year</th>
-              <th>Annual Investment</th>
-            </tr>
-          </thead>
-          <tbody>
-            {investmentResults.map((result) => (
-              <tr key={result.year}>
-                <td>{result.year}</td>
-                <td>{formatter.format(result.interest)}</td>
-                <td>{formatter.format(result.valueEndOfYear)}</td>
-                <td>{formatter.format(result.annualInvestment)}</td>
+        <div id="result">
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Investment Value</th>
+                <th>Interest(Year) </th>
+                <th>Total Interest</th>
+                <th>Invested Capital</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {investmentResults.map((result) => (
+                <tr key={result.year}>
+                  <td>{result.year}</td>
+                  <td>{formatter.format(result.valueEndOfYear)}</td>
+                  <td>{formatter.format(result.interest)}</td>
+                  <td>{formatter.format(result.totalInterestEarned)}</td>
+                  <td>{formatter.format(result.totalInvestedCapital)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );

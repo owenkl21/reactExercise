@@ -72,29 +72,27 @@ body {
 
 #result {
   display: flex;
-  max-width: 50rem;
-  margin: 2rem auto;
-  padding: 1rem;
-  table-layout: fixed;
-  border-spacing: 1rem;
-  text-align: center;
-  justify-content: center;
-
+  flex-direction: column;
+  max-width: 30rem;
+  width: 100%;
+  /* Ensure it takes up the available space */
+  margin: auto;
+  /* Center horizontally */
+  align-self: center;
+  /* Ensure this item is centered in the flex container */
+  box-sizing: border-box;
+  /* Include padding and border in the width */
 }
 
 #result table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 1rem;
-  /* Space between rows */
+  border-spacing: 0 0.5rem;
 }
 
 #result th,
 #result td {
-  width: 25%;
-  /* As there are four columns, each gets 25% */
-  text-align: center;
-  /* Optional: for aligning content in the center */
+  text-align: right;
 }
 
 #result thead {
@@ -110,4 +108,13 @@ body {
 
 .center {
   text-align: center;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
