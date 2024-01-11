@@ -1,10 +1,9 @@
-import Player from './components/Player.jsx';
-
+import React from 'react';
+import Player from './components/Player';
 function App() {
   return (
     <>
-      <Player />
-      <div id="challenges"></div>
+      <Player id="player"></Player>
     </>
   );
 }
