@@ -1,0 +1,81 @@
+/* Drawer toggle button */
+.drawer-toggle {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fbfbf0;
+    margin: 0;
+}
+
+/* Drawer menu styles */
+#links {
+    display: flex;
+    /* For desktop view */
+    /* Other styles... */
+
+}
+
+#links a {
+    margin: 30px;
+    color: black;
+    font-size: 30px;
+}
+
+#links button {
+    margin: 30px;
+    padding: 10px 50px;
+    font-size: 30px;
+}
+
+#links.open {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* Show drawer when open */
+    position: absolute;
+    top: 100%;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #fbfbf0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: black;
+    margin: 0;
+
+}
+
+/* Backdrop for drawer */
+.drawer-backdrop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.drawer-toggle {
+    display: block;
+    /* Show toggle button on mobile/tablet */
+}
+
+#links {
+    display: none;
+    /* Hide links by default on mobile/tablet */
+}
+
+.drawer-backdrop {
+    display: block;
+    /* Show backdrop when drawer is open */
+    height: 100vh;
+}

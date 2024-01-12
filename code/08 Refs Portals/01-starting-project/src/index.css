@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
 
 
 html {
@@ -7,6 +9,7 @@ html {
 }
 
 body {
+  background-color: #fbfbf0;
   margin: 0;
   padding: 0;
 }
@@ -15,13 +18,17 @@ body {
 #player {
   height: 100vh;
   width: 100vw;
-  background-image: url('../src/assets/fighter.jpg');
+  background-image: url('../src/assets/fighters.jpg');
   background-size: cover;
   /* Ensures that the background covers the entire container */
   background-position: center;
   /* Centers the image in the container */
   background-repeat: no-repeat;
   /* Prevents the image from repeating */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 #player h1 {
@@ -31,4 +38,522 @@ body {
 #player2 {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../src/assets/blob.svg');
+  background-repeat: no-repeat;
+  background-position: -500px 0px;
+  background-size: contain;
+}
+
+#playerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 0 150px;
+  align-items: center;
+
+}
+
+#playerText {
+  font-size: 20px;
+  font-family: 'Montserrat',
+    sans-serif;
+  font-weight: 600;
+
+}
+
+#playerText span {
+  color: #e22d25;
+
+}
+
+#playerText h1 {
+  font-size: 40px;
+  font-family: 'Montserrat',
+    sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+
+}
+
+#playerImage img {
+  width: 600px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#playerButton {
+  margin: 20px 10px;
+  /* Space out the links and button */
+  text-decoration: none;
+  /* Removes underline from links */
+  text-transform: uppercase;
+  font-family: 'Montserrat',
+    sans-serif;
+  font-weight: 700;
+  color: #fbfbf0;
+  font-size: 20px;
+  background-color: #e22d25;
+  /* Button background color */
+  border: none;
+
+  /* Removes border */
+  padding: 20px 40px;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+
+}
+
+#exercise {
+  width: 30%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  background-color: #fbfbf0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: rgba(255, 23, 23, 0.25) 10px 20px 55px,
+    rgba(255, 1, 1, 0.12) 10px 10px 20px,
+    rgba(253, 0, 0, 0.12) 10px 4px 6px,
+    rgba(255, 1, 1, 0.17) 10px 12px 10px,
+    rgba(248, 1, 1, 0.09) 10px -3px 5px;
+}
+
+#exercise img {
+  width: 30%;
+
+  margin: 10px 0;
+
+}
+
+#icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+
+
+
+#icon p {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #e22d25;
+  font-family: 'Montserrat',
+    sans-serif;
+
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#heading {
+  position: absolute;
+  top: 20%;
+  right: 65%;
+  width: 500px;
+  height: 100px;
+
+}
+
+
+#heading h1 {
+  font-family: 'Montserrat',
+    sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fbfbf0;
+}
+
+#heading span {
+
+  color: #e22d25;
+}
+
+#headContainer {
+  position: absolute;
+  /* Align to the top edge */
+  width: 100%;
+  /* Span the full width of the viewport */
+  background: transparent;
+  /* Transparent background */
+  display: flex;
+  /* Horizontal layout */
+  justify-content: space-between;
+  /* Space out logo and links */
+  align-items: center;
+  /* Align items vertically in the center */
+  padding: 10px;
+  /* Add some padding around the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional: adds a subtle shadow for depth */
+  z-index: 1000;
+  /* Ensures the header is above other content */
+}
+
+#logo {
+  display: flex;
+  /* Aligns logo and title horizontally */
+  align-items: center;
+  /* Centers them vertically */
+  text-transform: uppercase;
+  font-family: 'Montserrat',
+    sans-serif;
+
+  color: #fbfbf0;
+}
+
+#logo span {
+  color: #e22d25;
+}
+
+#logo img {
+  margin-right: 0px;
+  margin-left: 50px;
+  /* Adds some space between the logo and title */
+  width: 100px;
+}
+
+#logo img:hover {
+  margin-right: 0px;
+  margin-left: 50px;
+  /* Adds some space between the logo and title */
+  width: 100px;
+  filter: drop-shadow(0px 8px 24px #fbfbf0) drop-shadow(0px 16px 56px #fbfbf0) drop-shadow(0px 24px 80px #fbfbf0);
+}
+
+
+#links {
+  margin: 0 50px 0;
+}
+
+#links a,
+#links button {
+  margin: 0 10px;
+  /* Space out the links and button */
+  text-decoration: none;
+  /* Removes underline from links */
+  text-transform: uppercase;
+  font-family: 'Montserrat',
+    sans-serif;
+  font-weight: 700;
+  color: #fbfbf0;
+}
+
+#links button {
+  background-color: #e22d25;
+  /* Button background color */
+  border: none;
+
+  /* Removes border */
+  padding: 10px 20px;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+
+}
+
+.fa-envelope {
+  color: #fbfbf0;
+  /* Example color */
+  font-size: 24px;
+  /* Example size */
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-linkedin {
+  font-size: 24px;
+  /* Example size */
+  color: #fbfbf0;
+  /* Example color - black */
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 180px;
+  background-color: black;
+  color: #fbfbf0
+}
+
+#footerLeft {
+  font-family: 'Montserrat',
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+
+}
+
+#footerLeft span {
+  color: #e22d25;
+}
+
+#email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+}
+
+#footerRight {
+  font-family: 'Montserrat',
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 60px;
+
+  width: 100%;
+
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  margin: 21.44px 0 18px 0;
+  gap: 20px;
+}
+
+#term {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for mobile devices */
+
+  #player,
+  #player2 {
+    height: auto;
+    /* Adjust height for mobile */
+    width: 100%;
+    /* Full width */
+  }
+
+  #playerContainer,
+  #footer {
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin: 0 20px;
+    /* Adjust margin */
+  }
+
+  #playerText,
+  #footerLeft,
+  #footerRight {
+    font-size: 16px;
+    /* Smaller font size */
+  }
+
+  #playerImage img {
+    width: 100%;
+    /* Full width images */
+    max-width: 400px;
+    /* Limit maximum size */
+  }
+
+  #heading {
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    /* Adjust the width of heading */
+  }
+
+  #logo img {
+    margin-left: 20px;
+    /* Adjust logo margin */
+    width: 80px;
+    /* Smaller logo */
+  }
+
+  #links,
+  #footerLeft,
+  #footerRight {
+    margin: 0 20px;
+    /* Adjust margins */
+  }
+
+  #social,
+  #term {
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin: 10px 0;
+    /* Adjust margin */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Styles for tablet devices */
+
+  #player {
+
+    height: 150vh;
+    /* Adjust height for tablets */
+    width: 100vw;
+    /* Full width */
+  }
+
+  #player2 {
+    width: 100%;
+    height: 100%;
+    background-image: none;
+  }
+
+
+  #playerContainer {
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin: -300px 40px 0 40px;
+    /* Adjust margin */
+  }
+
+  #playerText,
+
+  #playerImage img {
+    width: 100%;
+    /* Full width images */
+    max-width: 500px;
+    /* Limit maximum size */
+  }
+
+  #heading {
+
+    top: 60%;
+    right: 20%;
+    width: 70%;
+    /* Adjust the width of heading */
+  }
+
+  #heading h1 {
+    font-size: 60px;
+  }
+
+  #heading span {
+    background-color: #fbfbf0;
+    padding: 5px 10px;
+  }
+
+  #exercise {
+    width: 60%;
+    position: absolute;
+    top: 85%;
+  }
+
+  #logo img {
+    margin-left: 30px;
+    /* Adjust logo margin */
+    width: 90px;
+    /* Adjust logo size */
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 20px 20px;
+  }
+
+
+
+  #links a {
+    margin: 30px;
+    color: black;
+    font-size: 30px;
+  }
+
+  #links button {
+    margin: 30px;
+    padding: 10px 50px;
+    font-size: 30px;
+  }
+
+  #links.open {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* Show drawer when open */
+    position: absolute;
+    top: 100%;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #fbfbf0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: black;
+    margin: 0;
+
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide the regular menu */
+  #links {
+    display: none;
+  }
+
+}
+
+
+/* Hamburger Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  /* Hidden by default */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Regular Menu Styles */
+#links {
+  display: flex;
+  /* Regular horizontal menu for large screens */
+  /* Other styles */
+}
+
+/* Styles for when the menu is open */
+#links.open {
+  display: block;
+  /* Vertical menu layout for small screens */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  /* Other styles */
 }
