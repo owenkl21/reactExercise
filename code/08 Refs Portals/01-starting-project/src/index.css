@@ -214,6 +214,7 @@ body {
   display: flex;
   /* Aligns logo and title horizontally */
   align-items: center;
+  justify-content: center;
   /* Centers them vertically */
   text-transform: uppercase;
   font-family: 'Montserrat',
@@ -243,7 +244,9 @@ body {
 
 
 #links {
+  display: flex;
   margin: 0 50px 0;
+  align-items: center;
 }
 
 #links a,
@@ -350,68 +353,7 @@ body {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
-  /* Styles for mobile devices */
 
-  #player,
-  #player2 {
-    height: auto;
-    /* Adjust height for mobile */
-    width: 100%;
-    /* Full width */
-  }
-
-  #playerContainer,
-  #footer {
-    flex-direction: column;
-    /* Stack elements vertically */
-    margin: 0 20px;
-    /* Adjust margin */
-  }
-
-  #playerText,
-  #footerLeft,
-  #footerRight {
-    font-size: 16px;
-    /* Smaller font size */
-  }
-
-  #playerImage img {
-    width: 100%;
-    /* Full width images */
-    max-width: 400px;
-    /* Limit maximum size */
-  }
-
-  #heading {
-    top: 10%;
-    right: 10%;
-    width: 80%;
-    /* Adjust the width of heading */
-  }
-
-  #logo img {
-    margin-left: 20px;
-    /* Adjust logo margin */
-    width: 80px;
-    /* Smaller logo */
-  }
-
-  #links,
-  #footerLeft,
-  #footerRight {
-    margin: 0 20px;
-    /* Adjust margins */
-  }
-
-  #social,
-  #term {
-    flex-direction: column;
-    /* Stack elements vertically */
-    margin: 10px 0;
-    /* Adjust margin */
-  }
-}
 
 @media only screen and (max-width: 1024px) {
   /* Styles for tablet devices */
@@ -485,19 +427,6 @@ body {
   }
 
 
-
-  #links a {
-    margin: 30px;
-    color: black;
-    font-size: 30px;
-  }
-
-  #links button {
-    margin: 30px;
-    padding: 10px 50px;
-    font-size: 30px;
-  }
-
   #links.open {
     display: flex;
     flex-direction: column;
@@ -517,43 +446,14 @@ body {
 
   }
 
-  .menu-toggle {
-    display: block;
+  #links a {
+    font-size: 12px;
   }
 
-  /* Hide the regular menu */
-  #links {
-    display: none;
+  #links button {
+    font-size: 12px;
+
   }
 
-}
 
-
-/* Hamburger Menu Toggle Button */
-.menu-toggle {
-  display: none;
-  /* Hidden by default */
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Regular Menu Styles */
-#links {
-  display: flex;
-  /* Regular horizontal menu for large screens */
-  /* Other styles */
-}
-
-/* Styles for when the menu is open */
-#links.open {
-  display: block;
-  /* Vertical menu layout for small screens */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  /* Other styles */
 }

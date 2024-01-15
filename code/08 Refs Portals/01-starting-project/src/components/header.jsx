@@ -16,14 +16,10 @@ export default function Header() {
             <span>b</span>ox<span>b</span>alboa
           </h1>
         </div>
-        <button className="menu-toggle" onClick={toggleMenu}>
-          ☰
-        </button>
         <div id="links" className={isMenuOpen ? 'open' : ''}>
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
-          <a href="#">Locations</a>
           <button>Sign Up</button>
         </div>
       </div>
